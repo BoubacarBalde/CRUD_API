@@ -1,0 +1,46 @@
+
+<form [formGroup]="student_form" class="needs-validation" (ngSubmit)="updateStudent()">
+    <div class="form-group">
+      <label for="first_name">Prénom</label>
+      <input type="text" class="form-control" id="first_name" formControlName="first_name" required>
+      <div class="invalid-feedback">
+        Veuillez fournir un prénom valide.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="last_name">Nom de famille</label>
+      <input type="text" class="form-control" id="last_name" formControlName="last_name" required>
+      <div class="invalid-feedback">
+        Veuillez fournir un nom de famille valide.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="date_of_birth">Date de naissance</label>
+      <input type="date" class="form-control" id="date_of_birth" formControlName="date_of_birth" required>
+      <div class="invalid-feedback">
+        Veuillez fournir une date de naissance valide.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email">E-mail</label>
+      <input type="email" class="form-control" id="email" formControlName="email" required>
+      <div class="invalid-feedback">
+        Veuillez fournir une adresse e-mail valide.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="address">Adresse</label>
+      <input type="text" class="form-control" id="address" formControlName="address" required>
+      <div class="invalid-feedback">
+        Veuillez fournir une adresse valide.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="phone_number">Numéro de téléphone</label>
+      <input type="tel" class="form-control" id="phone_number" formControlName="phone_number">
+      <div class="invalid-feedback">
+        Veuillez fournir un numéro de téléphone valide.
+      </div>
+    </div>
+    <button [disabled]="this.student_form.invalid" type="submit" class="btn btn-primary">Soumettre</button>
+  </form>
